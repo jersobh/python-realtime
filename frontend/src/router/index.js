@@ -10,12 +10,12 @@ export default new Router({
   routes: [
     {
       path: '/sse_poll',
-      name: 'poll',
+      name: 'sse_poll',
       component: sse
     },
     {
       path: '/ws_poll',
-      name: 'poll',
+      name: 'ws_poll',
       component: ws
     }
   ]

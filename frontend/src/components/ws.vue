@@ -2,12 +2,17 @@
   <div class="hello">
     <h2>Running over Websockets</h2>
     <column-chart :data="[['Cruzeiro', datasource.cruzeiro], ['Atlético-MG', datasource.atletico]]"  :colors="['#0d47a1', '#333']" :animation="false"></column-chart>
-    <button class="botao" @click="add_vote_cruzeiro()"> Cruzeiro </button>&nbsp;&nbsp;<button class="botao" @click="add_vote_atletico()"> Atlético - MG </button>
+     <div class="row" style="max-width:100%;"> 
+     <b>{{datasource.cruzeiro}}</b>
+    <img src="cruzeiro.png" @click="add_vote_cruzeiro()" style="max-width:40%;max-height:120px;cursor:pointer;padding:1%;"></img>
+    <img src="atleticomg.png" @click="add_vote_atletico()" style="max-width:40%;max-height:120px;cursor:pointer;padding:1%;"></img>
+    <b>{{datasource.atletico}}</b>
+    </div>
   </div>
 </template>
 
 <script>
-import Vue from 'vue'
+import Vue from 'vue/dist/vue.js';
 import VueChartkick from 'vue-chartkick'
 import Chart from 'chart.js'
 import axios from 'axios'
