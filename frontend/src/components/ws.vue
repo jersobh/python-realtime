@@ -44,7 +44,7 @@ export default {
     connect_ws: function () {
     let self = this
       console.log('Connecting...');
-      this.ws = new SockJS('https://localhost/ws/', 'websocket', {debug: true});
+      this.ws = new SockJS('/ws/', 'websocket', {debug: true});
 
         this.ws.onopen = function() {
           console.log('Connected.');

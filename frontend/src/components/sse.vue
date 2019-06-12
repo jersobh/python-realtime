@@ -43,7 +43,7 @@ export default {
   },
   mounted () {
     let self = this
-    self.evtSource = new EventSource("https://localhost/sse/");
+    self.evtSource = new EventSource("/sse/");
     self.evtSource.onmessage = function(e) {
       let data = JSON.parse(e.data);
       self.datasource.cruzeiro = data.cruzeiro
