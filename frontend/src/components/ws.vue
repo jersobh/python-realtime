@@ -35,11 +35,11 @@ export default {
   methods: {
     add_vote_cruzeiro: function () {
     axios
-      .post('https://localhost/vote_cruzeiro')
+      .post('/vote_cruzeiro')
     },
     add_vote_atletico: function () {
     axios
-      .post('https://localhost/vote_atletico')
+      .post('/vote_atletico')
     },
     connect_ws: function () {
     let self = this
